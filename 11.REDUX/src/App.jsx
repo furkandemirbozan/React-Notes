@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { decrement, increment } from './redux/CounterSlice';
+import UserList from './UserList';
+
 //Yani kısaca Slice ın içerisindeki state e arişmek için useSellector kullanılır fonksiyona erişmek için ise useDispatch kullanılır 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
         <button onClick={() => dispatch(increment())}>Arttir</button>
         <button onClick={() => dispatch(decrement())}>Azalt</button>
       </div>
+      <UserList />
     </div>
   )
 }
